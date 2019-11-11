@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:focusable="false"
+                                                   android:focusableInTouchMode="false">
+
+    <EditText
+            android:text="@string/textviewExp"
+            android:layout_width="wrap_content"
+
+
+            android:layout_height="wrap_content"
+            android:id="@+id/editText" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="107dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="176dp"/>
+    <Button
+            android:text="@string/btnVoRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:id="@+id/btnOk" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="166dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="104dp"/>
+    <Button
+            android:text="@string/btnOtkazi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="false"
+            android:focusable="false"
+            android:id="@+id/btnNok" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="164dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="232dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

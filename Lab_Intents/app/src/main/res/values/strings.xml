@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Lab_Intents</string>
+    <string name="textview">TextView</string>
+    <string name="Button1">Button</string>
+    <string name="Button2">Button</string>
+    <string name="Button3">Button</string>
+    <string name="Button4">Button</string>
+    <string name="textviewExp">TextView</string>
+    <string name="btnVoRed">Vo red</string>
+    <string name="btnOtkazi">Otkazi</string>
+    <string name="Explicit">Explicit</string>
+    <string name="Implicit">Implicit</string>
+    <string name="textViewImpl">TextView</string>
+    <string name="Share">Share</string>
+    <string name="Image">Image</string>
+</resources>
