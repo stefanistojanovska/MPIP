@@ -17,7 +17,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".ExplicitActivity"></activity>
-        <activity android:name=".ImplicitActivity"></activity>
+        <activity android:name=".ImplicitActivity">
+            <intent-filter>
+                <action android:name="mk.ukim.finki.mpip.IMPLICIT_ACTION" />
+                <!--<data android:mimeType="text/plain" />-->
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnImplicit;
     private Button btnShare;
     private Button btnImage;
-    Logger logger=Logger.getLogger("MainActivity");
+    //Logger logger=Logger.getLogger("MainActivity");
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         btnExplicit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivityForResult(new Intent(MainActivity.this, ExplicitActivity.class), 1);
                 launchActivityExplicitly();
             }
         });
@@ -65,15 +64,18 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    void launchActivityExplicitly() {
-        Intent intent = new Intent(this, ExplicitActivity.class);
-        startActivity(intent);
+    void launchActivityExplicitly()
+    {
+        startActivityForResult(new Intent(MainActivity.this, ExplicitActivity.class), 1);
     }
+
     void launchActivityImplicitly()
     {
 
-        Intent intent = new Intent(this,ImplicitActivity.class);
+        Intent intent = new Intent();
+        //Intent intent=new Intent();
         intent.setAction("mk.ukim.finki.mpip.IMPLICIT_ACTION");
+        intent.addCategory("android.intent.category.DEFAULT");
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
