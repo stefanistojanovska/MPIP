@@ -1,24 +1,10 @@
 package com.wp;
 
-import android.app.SearchManager;
-import android.content.Intent;
-import android.os.Bundle;
-import android.widget.ImageView;
-import android.widget.TextView;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
-import com.wp.db.Repository;
-import com.wp.models.Movie;
-import com.wp.service.MoviesService;
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class SearchResultsActivity extends AppCompatActivity {
 
-    private static final String BASE_URL = "http://www.omdbapi.com";
+    /*private static final String BASE_URL = "http://www.omdbapi.com";
     private static final String API_KEY = "3db28c7f";
     Retrofit retrofit;
     private MoviesService moviesService;
@@ -102,5 +88,5 @@ public class SearchResultsActivity extends AppCompatActivity {
         genre.setText(movie.getGenre());
         plot.setText(movie.getPlot());
         year.setText(movie.getYear());
-    }
+    }*/
 }
