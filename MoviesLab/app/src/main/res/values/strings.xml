@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MoviesLab</string>
+    <string name="top_menu_item_1">top_menu_item_1</string>
+    <string name="search_title">search_title</string>
+</resources>
