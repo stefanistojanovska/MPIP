@@ -11,6 +11,6 @@ public interface MoviesService {
     Call<Movie> getMovie( @Query("i") String id,@Query("apikey") String apiKey);
 
     @GET("/")
-    Call<MovieList> getMovieList( @Query("s") String queryString,@Query("apikey") String apiKey);
+    Call<MovieList> getMovieList(@Query("s") String queryString, @Query("apikey") String apiKey);
 
 }

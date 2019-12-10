@@ -16,17 +16,12 @@ public interface MovieDao {
 
     @Query("SELECT * from moviesDb")
     public LiveData<List<Movie>> getAllAsync();
-    //@Query("SELECT * from moviesDb WHERE custom_title LIKE :title")
-    //public List<DzTrack> findByTitle(String title); // title == "abc"
 
-   // @Query("SELECT * from dz_track WHERE id = :id")
-   // public DzTrack findById(Long id);
 
     @Insert
     public void insert(Movie ...movies);
 
-   // @Query("DELETE from dz_track WHERE id = :id")
-    //public void delete(Long id);
+
 
     @Query("DELETE from moviesDb")
     public void deleteAll();

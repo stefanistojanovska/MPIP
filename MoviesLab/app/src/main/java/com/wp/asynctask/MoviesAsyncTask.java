@@ -25,6 +25,7 @@ public class MoviesAsyncTask extends AsyncTask<Long, Integer, MovieList> {
     @Override
     protected MovieList doInBackground(Long... longs) {
         final Call<MovieList> movieList = OmdbApiClient.getService().getMovieList(" ","3db28c7f");
+                //MoviesService.getMovieList(" ","3db28c7f");
         try {
 
             return movieList.execute().body();
@@ -37,7 +38,7 @@ public class MoviesAsyncTask extends AsyncTask<Long, Integer, MovieList> {
 
     @Override
     protected void onPostExecute(MovieList movieList) {
-        for(Movie m: movieList.data) {
+        for(Movie m: movieList.movies) {
             repository.insert(m);
         }
 

@@ -7,17 +7,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.wp.R;
 import com.wp.holders.CustomListViewHolder;
-import com.wp.models.Movie;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.wp.models.MovieList;
 
 public class CustomListAdapter extends RecyclerView.Adapter {
-    List<Movie> dataset;
+    MovieList dataset;
     View.OnClickListener listener;
 
-    public CustomListAdapter(View.OnClickListener listener) {
-        this.dataset = new ArrayList<>();
+    public CustomListAdapter(View.OnClickListener listener,MovieList dataset) {
+        this.dataset =dataset;
         this.listener = listener;
     }
 
@@ -33,21 +30,23 @@ public class CustomListAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         //TODO Dovrsi setText!
-        ((CustomListViewHolder)holder).setText(dataset.get(position).title, listener);
+        //((CustomListViewHolder)holder).setText(dataset.get(position).title, listener);
     }
 
     @Override
     public int getItemCount() {
-        return dataset.size();
+        //return dataset.size();
+        return 0;
     }
-    public void updateDataset(List<Movie> newDataset) {
+    public void updateDataset(MovieList newDataset) {
         this.dataset = newDataset;
         notifyDataSetChanged();
     }
 
     public Long getClickedItemId(CustomListViewHolder holder) {
         int adapterPosition = holder.getAdapterPosition();
-        return dataset.get(adapterPosition).Id;
+        //return dataset.get(adapterPosition).Id;
+        return 0L;
     }
 
 }
